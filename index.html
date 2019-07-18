@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Mini App</title>
+
+  </head>
+  
+
+  <body>
+    <button id='filter-query' class='mdc-icon-button
+material-icons'>Filter List</button>
+    <div class='select'>
+      <select class='select-text'>
+        <option disabled selected>Select user</option>
+      </select>
+    </div>
+    <div class='user-photo'>
+      <img src='https://via.placeholder.com/350x150' alt='Profile Picture'>
+    </div>
+
+    <div class='details mdc-elevation--z3'>
+      <p><span class='prop' data-age>Age: <span class='value' data-age-value></p>
+      <p><span class='prop' data-height>Height: <span class='value' data-height-value></p>
+      <p><span class='prop' data-weight>Weight: <span class='value' data-weight-value></p>
+      <p><span class='prop' data-gender>Gender: <span class='value' data-gender-value></p>
+      <p><span class='prop' data-country>Country: <span class='value' data-country-value></p>
+    </div>
+
+    <button id='oracle' class='mdc-button'>Compute</button>
+
+    <div id='outcome'>
+      <h1 class='mdc-typography--headline5'>BMI</h1>
+      <p></p>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+
+</html>
