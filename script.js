@@ -12,10 +12,21 @@
           userCountry = document.querySelector('#country').value,
           message = document.querySelector('#message');
 
-    const computeBMI = (height, weight) => {
+    const computeBMI = (height, weight, country) => {
+
+      let countries = ['Chad', 'Sierra Leone', 'Mali', 'Gambia',
+'Uganda', 'Ghana', 'Senegal', 'Somalia',
+          'Ivory Coast', 'Isreal'
+        ];
 
       const h = height * 0.3048;
       let bmi = weight / (h * h);
+
+      for (let i = 0; i < countries.length; i++) {
+          if (countries[i].toLowerCase() === country.toLowerCase()) {
+            bmi = bmi * 0.82;
+          }
+        }
         
       return bmi.toFixed(1);
     };
@@ -32,7 +43,7 @@
       document.querySelector('.data-name').innerText += ` ${userName.toUpperCase()}`;
       document.querySelector('.data-country').innerText += ` ${userCountry.toUpperCase()}`;
       
-      let bmi = computeBMI(userHeight, userWeight);
+      let bmi = computeBMI(userHeight, userWeight, userCountry);
 
       document.querySelector('#display').innerText = bmi;
 
